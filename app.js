@@ -29,7 +29,9 @@ function agregarAmigo() {
 }
 
 function limpiarSorteo() {
-    document.querySelector('#resultado').value = '';
+    var listView = document.querySelector('#resultado');
+    listView.innerHTML = "";
+    return;
 }
 
 function sortearAmigo() {
@@ -38,5 +40,5 @@ function sortearAmigo() {
     var posicionElegida = Math.floor(Math.random() * listaAmigos.length);
     resultado = listaAmigos[posicionElegida];
     mostrarresultado(resultado)
-    
+    return;
 }
