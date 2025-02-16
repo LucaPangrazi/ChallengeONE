@@ -18,10 +18,12 @@ function mostrarresultado(nombre){
 function agregarAmigo() {
     let nombre = document.getElementById('amigo').value;
     if (nombre != "") {
+        if (listaAmigos.includes(nombre)){
+            alert('esa persona ya fue cargada')
+        }
         listaAmigos.push(nombre);
     }
     else{
-        
         alert('El nombre no puede estar vacio')
     }
     posicion++
