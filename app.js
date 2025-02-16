@@ -21,13 +21,15 @@ function agregarAmigo() {
         if (listaAmigos.includes(nombre)){
             alert('esa persona ya fue cargada')
         }
-        listaAmigos.push(nombre);
+        else{
+            listaAmigos.push(nombre);
+            posicion++
+            mostrarLista(nombre);
+        }
     }
     else{
         alert('El nombre no puede estar vacio')
     }
-    posicion++
-    mostrarLista(nombre);
 }
 
 function limpiarSorteo() {
